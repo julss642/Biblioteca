@@ -1,3 +1,0 @@
-/home/julss/Biblioteca/build/CMakeFiles/Biblioteca.dir
-/home/julss/Biblioteca/build/CMakeFiles/edit_cache.dir
-/home/julss/Biblioteca/build/CMakeFiles/rebuild_cache.dir
