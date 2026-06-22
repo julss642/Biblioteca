@@ -7,4 +7,5 @@ add_executable(
     src/main.cpp
     src/Libro.cpp
     src/Biblioteca.cpp
+    src/Prestamo.cpp
 )

@@ -4,6 +4,7 @@
 #include <sstream>
 #include "../include/Libro.h"
 #include "../include/Biblioteca.h"
+#include "../include/Prestamo.h"
 
 using namespace std;
 
@@ -15,7 +16,7 @@ int main() {
 
     int opcion = 0;
 
-    while(opcion != 7) {
+    while(opcion != 9) {
 
         cout << "\n===== BIBLIOTECA =====" << endl;
         cout << "1. Agregar libro" << endl;
@@ -24,8 +25,11 @@ int main() {
         cout << "4. Eliminar libro" << endl;
         cout << "5. Guardar biblioteca" << endl;
         cout << "6. Modificar libro" << endl;
-        cout << "7. Salir" << endl;
+        cout << "7. Prestar libro" << endl;
+        cout << "8. Mostrar prestamos" << endl;
+        cout << "9. Salir" << endl;
         cout << "Opcion: ";
+
 
         cin >> opcion;
 
@@ -116,7 +120,35 @@ int main() {
             break;
         }
 
-        case 7:
+        case 7: {
+
+            string nombrePersona;
+            string tituloLibro;
+
+            cin.ignore();
+
+            cout << "Nombre de la persona: ";
+            getline(cin, nombrePersona);
+
+            cout << "Titulo del libro: ";
+            getline(cin, tituloLibro);
+
+            Prestamo prestamo(nombrePersona, tituloLibro);
+
+            biblioteca.agregarPrestamo(prestamo);
+
+            cout << "Prestamo registrado correctamente." << endl;
+
+            break;
+        }
+
+        case 8:
+
+            biblioteca.mostrarPrestamos();
+
+            break;
+
+        case 9:
            cout << "Hasta luego" << endl;
             break;
 

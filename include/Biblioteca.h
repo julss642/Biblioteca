@@ -3,12 +3,14 @@
 
 #include <vector>
 #include "Libro.h"
+#include "Prestamo.h"
 
 class Biblioteca {
 
 private:
 
     std::vector<Libro> libros;
+    std::vector<Prestamo> prestamos;
 
 public:
 
@@ -19,6 +21,8 @@ public:
     void guardarBiblioteca();
     void cargarBiblioteca();
     void modificarLibro(std::string titulo);
+    void agregarPrestamo(Prestamo prestamo);
+    void mostrarPrestamos();
 
 };
 

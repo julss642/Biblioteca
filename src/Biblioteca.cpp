@@ -152,3 +152,23 @@ void Biblioteca::modificarLibro(string titulo) {
         cout << "Libro no encontrado." << endl;
     }
 }
+
+void Biblioteca::agregarPrestamo(Prestamo prestamo) {
+
+    prestamos.push_back(prestamo);
+}
+
+void Biblioteca::mostrarPrestamos() {
+
+    if(prestamos.empty()) {
+
+        cout << "No hay prestamos registrados." << endl;
+        return;
+    }
+
+    for(Prestamo prestamo : prestamos) {
+
+        prestamo.mostrarInformacion();
+        cout << endl;
+    }
+}
